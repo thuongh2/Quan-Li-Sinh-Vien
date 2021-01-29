@@ -14,6 +14,9 @@ void output (student A[], int n);
 void xuat (student x);
 void avg (student A[], int n);
 void connguoita (student A[], int n);
+void xephocsinh (student A[], int n);
+float tb (student A[]);
+void hoandoi (student &x, student &y);
 void xuatman ();
 int main ()
 {
@@ -34,9 +37,11 @@ int main ()
 			avg (A,n);
 		else if (a==4)
 			connguoita (A,n);
+		else if (a==5)
+			xephocsinh (A,n);
 			
 	} while (a !=0);
-	
+		xephocsinh (A,n);
 	return 0;
 }
 void input (student A[], int &n)
@@ -112,17 +117,41 @@ void connguoita (student A[], int n)
 	}
 	for (int i=0; i<n; i++)
 	{
-		float tb= (A[i].math + A[i].phy +A[i].chem )/3;
+			float tb= (A[i].math + A[i].phy +A[i].chem )/3;
 		if (max== tb)
 			xuat (A[i]);
 	}
 }
+void xephocsinh (student A[], int n)
+{
+
+	for (int i=0; i<n-1; i++)
+	{
+		float tb1= (A[i].math + A[i].phy +A[i].chem )/3;
+		for (int j=1; j<n ; j++)
+		{
+			float tb2= (A[j].math + A[j].phy +A[j].chem )/3;
+			if ( tb1 < tb2)
+				hoandoi (A[i], A[j]);
+		}
+	}
+	output (A,n);
+}
+
+void hoandoi (student &x, student &y)
+{
+	student c=x;
+	x=y;
+	y=c;
+}
 void xuatman ()
 {
-	printf ("======NHAP LUA CHON=======");
-	printf ("\n1 Nhan sinh vien");
-	printf ("\n2 Xuat sinh vien");
-	printf ("\n3 Xuat hoc sinh duoc len lop");
-	printf ("\n4 Xuat hoc sinh gioi nhat");
-	printf ("\n0 Thoat");
+	printf ("\n======================NHAP LUA CHON========================");
+	printf ("\n=			1 Nhap sinh vien						  	 =");
+	printf ("\n=			2 Xuat sinh vien							 =");
+	printf ("\n=			3 Xuat hoc sinh duoc len lop				 =");
+	printf ("\n=			4 Xuat hoc sinh gioi nhat					 =");
+	printf ("\n=			5 Sap xep theo thu tu diem trung binh		 =");
+	printf ("\n=			0 Thoat										 =");
+	printf ("\n===========================================================");
 }
