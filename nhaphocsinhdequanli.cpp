@@ -146,12 +146,12 @@ void hoandoi (student &x, student &y)
 }
 void xuatman ()
 {
-	printf ("\n======================NHAP LUA CHON========================");
-	printf ("\n=			1 Nhap sinh vien						  	 =");
-	printf ("\n=			2 Xuat sinh vien							 =");
-	printf ("\n=			3 Xuat hoc sinh duoc len lop				 =");
-	printf ("\n=			4 Xuat hoc sinh gioi nhat					 =");
-	printf ("\n=			5 Sap xep theo thu tu diem trung binh		 =");
-	printf ("\n=			0 Thoat										 =");
-	printf ("\n===========================================================");
+	printf ("\n======================NHAP LUA CHON============================");
+	printf ("\n=			1 Nhap sinh vien        	  	 =");
+	printf ("\n=			2 Xuat sinh vien			 =");
+	printf ("\n=			3 Xuat hoc sinh duoc len lop		 =");
+	printf ("\n=			4 Xuat hoc sinh gioi nhat		 =");
+	printf ("\n=			5 Sap xep theo thu tu diem trung binh	 =");
+	printf ("\n=			0 Thoat					 =");
+	printf ("\n===============================================================");
 }
